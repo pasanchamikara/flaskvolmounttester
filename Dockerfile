@@ -3,8 +3,7 @@ FROM python:3.8-slim-buster
 CMD mkdir /app
 
 WORKDIR /app
-COPY app.py app.py
-COPY requirements.txt requirements.txt
+COPY . .
 RUN pip3 install flask 
 
 COPY . .
