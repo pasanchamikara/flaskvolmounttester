@@ -17,7 +17,7 @@ def write_to_file():
         f.write("New Content, New volume mounted, salala")
         f.close()
         return {"message": "content written to /app/my.txt"}
-    except as e:
+    except Exception as e:
         return {"message": e}
 
 @app.route("/efs")
