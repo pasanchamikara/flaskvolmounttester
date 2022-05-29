@@ -13,7 +13,7 @@ def liveness_route():
 @app.route("/write")
 def write_to_file():
     try:
-        f = open("/app/my.txt", "a")
+        f = open("/efs/my.txt", "a")
         f.write("New Content, New volume mounted, salala")
         f.close()
         return {"message": "content written to /app/my.txt"}
